@@ -20,11 +20,9 @@ class Solution {
                 arr[5]=check(i+1,j-1,m,n)?board[i+1][j-1]:0;
                 arr[6]=check(i+1,j,m,n)?board[i+1][j]:0;
                 arr[7]=check(i+1,j+1,m,n)?board[i+1][j+1]:0;
-                for(int k=0;k<8;k++){
-                    System.out.print(arr[k]+" ");
+              for(int k=0;k<8;k++){
                     if(arr[k]==1) sum++;
                 }
-                System.out.println();
                 if(sum < 2 || sum > 3) next[i][j] = 0;
                 else if(sum == 3) next[i][j] = 1;
                 else next[i][j] = board[i][j];
